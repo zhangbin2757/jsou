@@ -1,0 +1,15 @@
+package jsou;
+
+option cc_generic_services=true;
+
+message Request {
+	optional bytes request = 1;
+}
+
+message Response {
+	optional bytes response = 1;
+}
+
+service JsouService {
+	rpc Call(Request) returns(Response);
+}

@@ -1,0 +1,6 @@
+#忽略Debug、Release目录
+Debug/
+Release/
+#忽略eclipse工程文件
+.project
+.cproject

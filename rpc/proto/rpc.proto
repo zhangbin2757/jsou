@@ -1,0 +1,24 @@
+package jsou;
+
+enum MType {
+	REQUEST = 1;
+	RESPONSE = 2;
+	ERROR = 3;
+}
+
+enum ECode {
+	INTERNAL = 1;
+	WRONG_PROTO = 2;
+	NO_SERVICE = 3;	
+	INVALID_REQUEST = 4;
+}
+
+message RpcMessage {
+	required MType type = 1;
+	required fixed64 id = 2;
+	optional string serviceName = 3;	
+	
+	optional bytes request = 4;
+	optional bytes response = 5;
+	optional ECode code = 6;
+}

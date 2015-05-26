@@ -1,0 +1,15 @@
+package echo;
+
+enum MType {
+	ECHO = 1;
+}
+
+message EchoReq {
+	required MType type = 1;
+	required string req = 2;
+}
+
+message EchoRes {
+	required MType type = 1;
+	required string res = 2;
+}
